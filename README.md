@@ -36,3 +36,17 @@ NOTE :
 
 # create topic t_fixedrate_2
 kafka-topics.sh --bootstrap-server localhost:9092 --create --topic t_fixedrate_2 --partitions 1 --replication-factor 1
+
+NOTE : 
+- See lecture with title "Executing Kafka Commands" if you need guidance to execute commands
+- If you use windows, change the .sh extension to .bat
+
+
+# create topic
+kafka-topics.sh --bootstrap-server localhost:9092 --create --topic t_multi_partitions --partitions 3 --replication-factor 1
+
+# describe topic
+kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic t_multi_partitions
+
+# Kafka console consumer (change the partition number as needed)
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t_multi_partitions --offset earliest --partition 0
