@@ -49,4 +49,4 @@ kafka-topics.bat --bootstrap-server localhost:9092 --create --topic t_multi_part
 kafka-topics.bat --bootstrap-server localhost:9092 --describe --topic t_multi_partitions
 
 # Kafka console consumer (change the partition number as needed)
-kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t_multi_partitions --offset earliest --partition 0
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic t_multi_partitions --offset earliest --partition 0
