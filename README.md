@@ -64,3 +64,28 @@ kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic t_multi_par
 
 # Kafka console consumer (change the partition number as needed)
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t_multi_partitions --offset earliest --partition 0
+
+NOTE : 
+- See lecture with title "Executing Kafka Commands" if you need guidance to execute commands
+- If you use windows, change the .sh extension to .bat
+
+
+# add topic
+kafka-topics.sh --bootstrap-server localhost:9092 --create --topic t_employee --partitions 1 --replication-factor 1
+
+# Kafka console consumer
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t_employee --offset earliest --partition 0
+
+NOTE : 
+- See lecture with title "Executing Kafka Commands" if you need guidance to execute commands
+- If you use windows, change the .sh extension to .bat
+
+
+# add topic
+kafka-topics.sh --bootstrap-server localhost:9092 --create --topic t_employee --partitions 1 --replication-factor 1
+
+# Kafka console consumer
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic t_employee --offset earliest --partition 0
+
+# Delete topic
+kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic t_employee
