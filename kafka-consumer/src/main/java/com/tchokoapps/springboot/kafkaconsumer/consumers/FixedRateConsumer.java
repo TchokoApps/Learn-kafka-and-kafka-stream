@@ -1,4 +1,4 @@
-package com.tchokoapps.springboot.kafkaconsumer;
+package com.tchokoapps.springboot.kafkaconsumer.consumers;
 
 import com.tchokoapps.springboot.kafkaconsumer.config.Config;
 import lombok.extern.slf4j.Slf4j;

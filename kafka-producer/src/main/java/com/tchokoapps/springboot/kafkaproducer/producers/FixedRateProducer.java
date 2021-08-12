@@ -1,4 +1,4 @@
-package com.tchokoapps.springboot.kafkaproducer;
+package com.tchokoapps.springboot.kafkaproducer.producers;
 
 import com.tchokoapps.springboot.kafkaproducer.config.Config;
 import lombok.extern.slf4j.Slf4j;
