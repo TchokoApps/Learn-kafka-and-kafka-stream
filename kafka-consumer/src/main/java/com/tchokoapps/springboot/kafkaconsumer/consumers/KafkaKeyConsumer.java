@@ -12,6 +12,5 @@ public class KafkaKeyConsumer {
     @KafkaListener(topics = "t_multi_partitions", concurrency = "3")
     public void consume(ConsumerRecord<String, String> message) throws InterruptedException {
         log.info("Key: {}, Partition: {}, Message: {}", message.key(), message.partition(), message.value());
-        Thread.sleep(100);
     }
 }
