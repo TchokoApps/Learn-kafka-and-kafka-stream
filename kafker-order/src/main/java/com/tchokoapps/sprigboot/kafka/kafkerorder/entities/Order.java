@@ -11,7 +11,8 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-@Entity
+@Builder
+@Entity(name = "orders")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,6 +30,6 @@ public class Order {
     @Column(nullable = false, length = 20)
     private String creditCardNumber;
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "order")
     private List<OrderItem> orderItems;
 }

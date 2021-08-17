@@ -1,12 +1,12 @@
 package com.tchokoapps.sprigboot.kafka.kafkerorder.utils;
 
-import java.io.IOException;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
+
+import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class LocalDateTimeDeserializer extends StdDeserializer<LocalDateTime> {
 
@@ -18,7 +18,7 @@ public class LocalDateTimeDeserializer extends StdDeserializer<LocalDateTime> {
 
 	@Override
 	public LocalDateTime deserialize(JsonParser parser, DeserializationContext context) throws IOException {
-		return LocalDateTime.parse(parser.readValueAs(String.class), DateConstant.DATE_TIME_FORMATTER);
+		return LocalDateTime.parse(parser.readValueAs(String.class), com.course.kafka.util.DateConstant.DATE_TIME_FORMATTER);
 	}
 
 }

@@ -9,7 +9,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @ToString
-@Entity
+@Builder
+@Entity(name = "order_items")
 public class OrderItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
